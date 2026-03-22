@@ -45,6 +45,70 @@ export default function AiNotePage() {
             invaluable to me.
           </p>
         </div>
+
+        <section
+          className="mt-12 border-t border-zinc-200 pt-10 dark:border-zinc-800"
+          aria-labelledby="contact-heading"
+        >
+          <h2
+            id="contact-heading"
+            className="text-lg font-semibold text-zinc-900 dark:text-zinc-100"
+          >
+            Links & contact
+          </h2>
+          <ul className="mt-4 space-y-2 text-base text-zinc-700 dark:text-zinc-300">
+            <li>
+              <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                Personal website:{" "}
+              </span>
+              <a
+                href="https://maxim-ivanov.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline underline-offset-2 dark:text-blue-400"
+              >
+                maxim-ivanov.dev
+              </a>
+            </li>
+            <li>
+              <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                GitHub:{" "}
+              </span>
+              <a
+                href="https://github.com/retr013"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline underline-offset-2 dark:text-blue-400"
+              >
+                github.com/retr013
+              </a>
+            </li>
+            <li>
+              <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                LinkedIn:{" "}
+              </span>
+              <a
+                href="https://www.linkedin.com/in/max-ivanov-04ab65221"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline underline-offset-2 dark:text-blue-400"
+              >
+                linkedin.com/in/max-ivanov-04ab65221
+              </a>
+            </li>
+            <li>
+              <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                Email:{" "}
+              </span>
+              <a
+                href="mailto:stagnirovat@gmail.com"
+                className="text-blue-600 underline underline-offset-2 dark:text-blue-400"
+              >
+                stagnirovat@gmail.com
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   );
