@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HDR UK — frontend technical exercise
 
-## Getting Started
+Small **Next.js (App Router)** app: a feedback form, a GitHub public-repos viewer, and a short note on using AI. Built for an educational / submission context.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build
+npm run lint    # eslint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What’s in the app
 
-## Learn More
+| Route        | Description |
+| ------------ | ----------- |
+| `/`          | Hub with three tiles |
+| `/feedback`  | Product feedback form (rating, comment, mock submit) |
+| `/github`    | Lists public repos for a GitHub user (default `vercel`), name filter client-side |
+| `/ai-note`   | Same “How I used AI” text as below, on the site |
 
-To learn more about Next.js, take a look at the following resources:
+## Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js, React, TypeScript  
+- Tailwind CSS v4  
+- GitHub REST API (`/users/{user}/repos`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## How I used AI on this project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Hi, my name is Max. Thank you very much for shortlisting me for the Junior Frontend Software Developer role at HDR UK. I really appreciate the opportunity to complete the technical test, and I hope you enjoy looking through the small pages I’ve built for the submission.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For the GitHub repositories page, I used Cursor’s built-in AI to help generate the initial structure for the fetch helper, repository card list, and client-side search/filtering, and then used ChatGPT to review and refine the result. The prompts that worked best were the specific ones where I included the brief, the stack I was using (Next.js App Router, TypeScript, Tailwind), and the edge cases I wanted covered, such as failed fetches, empty descriptions, and no matching search results. One area where I had to correct the generated output was around unnecessary complexity and a few implementation details that did not feel like the best fit for the project, so I adjusted the structure and interactions myself. I also made a small CSS change to the built-in clear button on the search input so it shows a pointer cursor, which helped polish the UI and improve the feel of the search experience.
+
+Thank you again for your time and consideration. Any feedback on the project, and on my application more broadly, would be genuinely invaluable to me.
